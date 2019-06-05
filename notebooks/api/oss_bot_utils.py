@@ -10,7 +10,7 @@ class ossbot_utils:
 def render_example(name):
     file = "examples/wardley_map/{0}.html".format(name)
     aws_lambda = Lambda('osbot_browser.lambdas.lambda_browser')
-    payload = {"params": ["render", name],
+    payload = {"params": ["render", file],
                'data': {}}
     png_data = aws_lambda.invoke(payload)
     show_png(png_data)
