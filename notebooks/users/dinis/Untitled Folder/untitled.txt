@@ -1,2 +1,2 @@
-class utils:
+class ossbot_utils:
     pass
