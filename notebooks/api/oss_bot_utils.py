@@ -1,3 +1,5 @@
+from osbot_aws.apis.Lambda import Lambda
+
 def ping():
     return 'pong ...'
 
