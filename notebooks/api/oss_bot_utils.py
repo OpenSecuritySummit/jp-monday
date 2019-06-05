@@ -1,5 +1,5 @@
 def ping():
-    return 'pong'
+    return 'pong ...'
 
 class ossbot_utils:
     pass
