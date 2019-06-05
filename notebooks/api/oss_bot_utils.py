@@ -1,4 +1,5 @@
-from osbot_aws.apis.Lambda import Lambda
+from IPython.display        import display_html
+from osbot_aws.apis.Lambda  import Lambda
 
 def ping():
     return 'pong ...'
