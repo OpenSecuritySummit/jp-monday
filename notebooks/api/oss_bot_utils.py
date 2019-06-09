@@ -29,6 +29,6 @@ def maps_create(code):
     payload = {"params": params,
                'data': {}}
     png_data = aws_lambda.invoke(payload)
-    show_png(png_data,800)
+    show_png(png_data,600)
 
     
