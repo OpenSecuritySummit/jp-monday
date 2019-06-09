@@ -24,5 +24,5 @@ def create_map(code, view="exec_js"):
     payload = {"params": ["maps",'exec_js', code ],
                'data': {}}
     png_data = aws_lambda.invoke(payload)
-    return png_data
+    show_png(png_data)
     
