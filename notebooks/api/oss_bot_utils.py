@@ -22,7 +22,7 @@ def show_png(png_data,height=200):
 def create_map(code):
     aws_lambda = Lambda('osbot_browser.lambdas.lambda_browser')
     params = ["maps", "exec_js"]
-    params.extend(code.split(' '))
+    params.extend('```' + code.split(' ') +'```')
     return params
     payload = {"params": params,
                'data': {}}
