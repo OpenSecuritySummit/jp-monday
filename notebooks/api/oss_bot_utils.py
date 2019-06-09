@@ -21,7 +21,7 @@ def show_png(png_data,height=200):
     
 def create_map(code, view="exec_js"):
     aws_lambda = Lambda('osbot_browser.lambdas.lambda_browser')
-    payload = {"params": ["maps",'create', code ],
+    payload = {"params": ["maps",'v', code ],
                'data': {}}
     png_data = aws_lambda.invoke(payload)
     return png_data
