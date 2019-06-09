@@ -21,7 +21,7 @@ def show_png(png_data,height=200):
 
     
 def maps_create(code):
-    return     display(Javascript("$('.container').width('45%')"))
+    display(Javascript("$('.container').width('95%')"))
     aws_lambda = Lambda('osbot_browser.lambdas.lambda_browser')
     params = ["maps", "exec_js"]
     params.extend(code.split(' '))
