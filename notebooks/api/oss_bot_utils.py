@@ -18,3 +18,10 @@ def render_example(name):
 def show_png(png_data,height=200):
     html = '<img style="border:1px solid black;height:{0}pt;" align="left" src="data:image/png;base64,{1}"/>'.format(height,png_data)
     display_html(html, raw=True)    
+    
+def create_map(code, view="exec_js"):
+    aws_lambda = Lambda('osbot_browser.lambdas.lambda_browser')
+    payload = {"params": ["maps",view, code ],
+               'data': {}}
+    return aws_lambda.invoke(payload)
+    
