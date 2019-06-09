@@ -19,7 +19,7 @@ def show_png(png_data,height=200):
     html = '<img style="border:1px solid black;height:{0}pt;" align="left" src="data:image/png;base64,{1}"/>'.format(height,png_data)
     display_html(html, raw=True)    
     
-def maps_create(code):
+def maps_create_3(code):
     aws_lambda = Lambda('osbot_browser.lambdas.lambda_browser')
     params = ["maps", "exec_js"]
     params.extend(code.split(' '))
