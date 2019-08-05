@@ -2,6 +2,7 @@ version: 0.1
 phases:
   build:
     commands:
+      - /home/jovyan/ngrok authtoken 1Ozvqjo45YltwaRsuhsISdF7WqB_4fwBcuEwfPEkQp64pfJwu
       - echo "**** Starting build (i.e. run workflow)"
       - /home/jovyan/ngrok http --log stdout 8888 &
       - pip install --upgrade osbot_jupyter osbot_jira osbot_gsuite
