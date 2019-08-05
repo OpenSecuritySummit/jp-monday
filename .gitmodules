@@ -1,0 +1,3 @@
+[submodule "notebooks/users/jon/OSBot-jira"]
+	path = notebooks/users/jon/OSBot-jira
+	url = https://github.com/owasp-sbot/OSBot-jira.git
