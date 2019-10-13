@@ -68,4 +68,5 @@ class Jira_Map:
         return self
     
     def show(self,height=300):
+        self.create()
         self.wmap.show_map(height)
