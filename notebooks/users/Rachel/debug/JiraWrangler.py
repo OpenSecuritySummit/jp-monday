@@ -12,5 +12,5 @@ class JiraIssueWrangler():
         self.api_jira._jira = JIRA(server='https://ubuntu-policy.atlassian.net/')
     
     def wrangle(self):
-        issue = self.api_jira.issue(issue_id)
+        issue = self.api_jira.issue(self.issue_id)
         return json.dumps(issue)
