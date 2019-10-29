@@ -47,7 +47,7 @@ class JiraIssueWrangler():
         return related_issues
                     
     def wrangle(self):
-        base_issue_response = self.api_jira.issue(issue_id)
+        base_issue_response = self.api_jira.issue(self.issue_id)
         issue = self._create_issue(base_issue_response)
         return issue.toJSON();
 
