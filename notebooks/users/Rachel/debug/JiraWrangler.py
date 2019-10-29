@@ -37,13 +37,8 @@ class JiraIssueWrangler():
             issue_response['Related Issues'],
         )
         
-        issue = 
+        return issue.toJSON();
         
-        for link_id in issue_links:
-            for issue_link in issue_links[link_id]:
-                if issue_link['Link Type'] == self.link_type:
-        
-        return json.dumps(base_issue)
 
 
 
