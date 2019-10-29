@@ -1,9 +1,8 @@
+import json
+
 from jira import JIRA
 from osbot_jira.api.jira_server.API_Jira import API_Jira
 
-import json
-
-    
 
 class Issue():
     
@@ -12,6 +11,15 @@ class Issue():
         self.summary = summary
         self.status = status
         self.related_issues = related_issues
+        
+    def toJson(self):
+
+        return json.dumps(
+            self,
+            default=lambda o: o.__dict__,
+            sort_keys=False,
+            indent=2
+        )
 
 
 class JiraIssueWrangler():
