@@ -29,7 +29,7 @@ class JiraIssueWrangler():
         self.api_jira = API_Jira()
         self.api_jira._jira = JIRA(server='https://ubuntu-policy.atlassian.net/')
         
-    def _get_issue(self, issue_response):
+    def _create_issue(self, response):
         return Issue(
             response['Key'],
             response['Summary'],
@@ -48,7 +48,7 @@ class JiraIssueWrangler():
                     
     def wrangle(self):
         base_issue_response = self.api_jira.issue(issue_id)
-        issue = self._get_issue(base_issue_response)
+        issue = self._create_issue(base_issue_response)
         return issue.toJSON();
 
 
