@@ -40,7 +40,7 @@ class JiraIssueWrangler():
     def _get_related_issues(self, response):
         related_issues = []
         
-        for key, related_issue in response['Issue Links'].items()
+        for key, related_issue in response['Issue Links'].items():
             related_issue_response = self.api_jira.issue(key)
             related_issues.append(self._get_issue(related_issue_response))
             
