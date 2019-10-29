@@ -15,5 +15,5 @@ class JiraIssueWrangler():
         issue = self.api_jira.issue(issue_id)
                     
     def wrangle(self):
-        base_issue, issue = self._get_issue(self.issue_id)             
+        base_issue = self._get_issue(self.issue_id)             
         return json.dumps(base_issue)
