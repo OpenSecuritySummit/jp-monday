@@ -38,7 +38,7 @@ class JiraIssueWrangler():
         )
         
         return issue.toJSON();
-        
+
 
 
 
